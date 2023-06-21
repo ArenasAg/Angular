@@ -1,0 +1,10 @@
+h1 {
+  text-align: center;
+}
+p {
+  font-size: 30px;
+}
+span {
+  text-decoration: underline;
+  color: rgb(107, 107, 245);
+}

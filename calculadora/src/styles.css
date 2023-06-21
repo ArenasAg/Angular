@@ -1,0 +1,197 @@
+body {
+  background: url("https://images8.alphacoders.com/126/1265937.jpg") no-repeat
+    center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculadora {
+  width: 400px;
+  border: 4px double black;
+  background-image: url("https://img.freepik.com/vector-gratis/fondo-abstracto-monocromatico-degradado_52683-74300.jpg");
+  background-size: contain;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pantalla {
+  margin-top: 10px;
+  height: 60px;
+  width: 90%;
+}
+
+.resultado {
+  width: 90%;
+  margin-top: -15px;
+}
+
+.bola {
+  display: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #000;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.input1 {
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.input2 {
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: transparent;
+  text-align: right;
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background: transparent;
+  width: 100%;
+}
+
+button {
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-image: url("https://i.pinimg.com/originals/34/49/7a/34497a3fe0ef52949a1ba8e99894ed69.png");
+  background-size: cover;
+  background: no-repeat;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  border: none;
+}
+
+.fila {
+  margin-left: 5px;
+  width: 80%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 25px;
+  height: 25px;
+  background-color: #ccc;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.top {
+  border-bottom: 2px solid #555;
+  margin-top: 2px;
+}
+
+.left {
+  border-right: 2px solid #555;
+  margin-right: 10px;
+}
+
+.center {
+  background-image: url("https://e7.pngegg.com/pngimages/24/35/png-clipart-circle-area-symbol-font-ben-10-education-science-green.png");
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.right {
+  border-left: 2px solid #555;
+}
+
+.bottom {
+  border-top: 2px solid #555;
+}
+
+.btn-on,
+.btn-off {
+  position: absolute;
+  margin-top: -100%;
+  margin-left: 340px;
+}
+
+.btn-on,
+.btn-off {
+  position: absolute;
+  margin-top: -520px;
+  margin-right: 20px;
+}
+
+.btn-on {
+  font-size: 20px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3d/Ben_10_Omnitrix.png");
+  background-size: contain, 20px, 20px;
+  border: none;
+  color: white;
+}
+
+.btn-off {
+  font-size: 20px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b700c630-9435-4853-b567-d025115b827b/degal1r-1978e002-91f0-41ae-81d0-ec06af12b438.png/v1/fill/w_894,h_894/omnitrix_symbol__albedo__by_gozenfrost_degal1r-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2I3MDBjNjMwLTk0MzUtNDg1My1iNTY3LWQwMjUxMTViODI3YlwvZGVnYWwxci0xOTc4ZTAwMi05MWYwLTQxYWUtODFkMC1lYzA2YWYxMmI0MzgucG5nIiwid2lkdGgiOiI8PTEwODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.2pt5ayfwIq67xWNGyUckN-arlA-1xrffgSjlIlC-Gog");
+  background-size: contain, 20px, 20px;
+  border: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .calculadora {
+    width: 98%;
+  }
+
+  .btn-on,
+  .btn-off {
+    position: absolute;
+    margin-top: -100%;
+    margin-left: 65%;
+  }
+
+  /* Estilos adicionales para mover el botón */
+  .botones {
+    position: relative;
+  }
+
+  .btn-on,
+  .btn-off {
+    position: absolute;
+    margin-top: -520px;
+    right: 40px;
+  }
+}

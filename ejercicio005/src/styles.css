@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "MiFuentePersonalizada";
+  src: url("../src/app/fuente/OPTISantita.otf") format("truetype");
+}
+
+* {
+  background: black;
+  font-family: "MiFuentePersonalizada", sans-serif;
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00a2,
+    0 0 70px #ff00a2, 0 0 80px #ff00a2, 0 0 100px #ff00a2, 0 0 150px #ff00a2;
+}

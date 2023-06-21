@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Administracion de articulos</h1>
+    <table class="tabla">
+      <tr>
+        <th>Codigo</th>
+        <th>Desripcion</th>
+        <th>Precio</th>
+        <th>Borrar</th>
+        <th>Seleccionar</th>
+      </tr>
+      <tr *ngFor="let articulo of articulos; let i = index">
+        <td>{{ articulo.codigo }}</td>
+        <td>{{ articulo.descripcion }}</td>
+        <td>{{ articulo.precio }}</td>
+        <td><button (click)="borrar(i)">Borrar</button></td>
+        <td><button (click)="seleccionar(i)">Seleccionar</button></td>
+      </tr>
+    </table>
+
+    <div>
+      <label
+        >Codigo:
+        <input
+          type="number"
+          placeholder="Codigo"
+          [(ngModel)]="art.codigo"
+          value="{{ art.codigo }}" /></label
+      ><br />
+      <label
+        >Descripcion:
+        <input
+          type="text"
+          placeholder="Descripcion"
+          [(ngModel)]="art.descripcion" /></label
+      ><br />
+      <label
+        >Precio:
+        <input
+          type="number"
+          placeholder="Precio"
+          [(ngModel)]="art.precio" /></label
+      ><br />
+      <button (click)="agregar()">Agregar</button>
+      <button (click)="modificar()">Modificar</button>
+    </div>
+  </body>
+</html>

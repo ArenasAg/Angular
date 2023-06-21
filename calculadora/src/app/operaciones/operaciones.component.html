@@ -1,0 +1,87 @@
+<div class="calculadora">
+  <button
+    [ngClass]="{ 'btn-on': displayButtonOn, 'btn-off': displayButtonOff }"
+    (click)="toggleButtonState()"
+  >
+    <audio id="ben10Sound" src="../../assets/sonidos/apagado.mp3"></audio>
+  </button>
+
+  <div class="botones">
+    <div class="fila">
+      <button [disabled]="displayButtonOn" (click)="agregarOperador('^')">
+        ^
+      </button>
+      <button [disabled]="displayButtonOn" (click)="agregarOperador('sin')">
+        sin
+      </button>
+      <button [disabled]="displayButtonOn" (click)="agregarNumero(7)">7</button>
+      <button [disabled]="displayButtonOn" (click)="agregarNumero(4)">4</button>
+      <button [disabled]="displayButtonOn" (click)="agregarNumero(1)">1</button>
+      <button [disabled]="displayButtonOn" (click)="agregarNumero(0)">0</button>
+    </div>
+
+    <div class="fila">
+      <button [disabled]="displayButtonOn" (click)="agregarOperador('^(1/2)')">
+        √
+      </button>
+      <button [disabled]="displayButtonOn" (click)="agregarOperador('cos')">
+        cos
+      </button>
+      <button [disabled]="displayButtonOn" (click)="agregarNumero(8)">8</button>
+      <button [disabled]="displayButtonOn" (click)="agregarNumero(5)">5</button>
+      <button [disabled]="displayButtonOn" (click)="agregarNumero(2)">2</button>
+      <button [disabled]="displayButtonOn" (click)="agregarOperador('.')">
+        .
+      </button>
+    </div>
+
+    <div class="fila">
+      <button [disabled]="displayButtonOn" (click)="agregarOperador('%')">
+        %
+      </button>
+      <button [disabled]="displayButtonOn" (click)="agregarOperador('tan')">
+        tan
+      </button>
+      <button [disabled]="displayButtonOn" (click)="agregarNumero(9)">9</button>
+      <button [disabled]="displayButtonOn" (click)="agregarNumero(6)">6</button>
+      <button [disabled]="displayButtonOn" (click)="agregarNumero(3)">3</button>
+      <button [disabled]="displayButtonOn" (click)="agregarOperador('e')">
+        EXP
+      </button>
+    </div>
+
+    <div class="fila">
+      <button></button>
+      <button [disabled]="displayButtonOn" (click)="agregarOperador('(')">
+        (
+      </button>
+      <button [disabled]="displayButtonOn" (click)="deleteCharacter()">
+        DEL
+      </button>
+      <button [disabled]="displayButtonOn" (click)="agregarOperador('*')">
+        X
+      </button>
+      <button [disabled]="displayButtonOn" (click)="agregarOperador('+')">
+        +
+      </button>
+      <button [disabled]="displayButtonOn" (click)="guardarNumero()">
+        Ans
+      </button>
+    </div>
+
+    <div class="fila">
+      <button></button>
+      <button [disabled]="displayButtonOn" (click)="agregarOperador(')')">
+        )
+      </button>
+      <button [disabled]="displayButtonOn" (click)="borrar()">AC</button>
+      <button [disabled]="displayButtonOn" (click)="agregarOperador('/')">
+        /
+      </button>
+      <button [disabled]="displayButtonOn" (click)="agregarOperador('-')">
+        -
+      </button>
+      <button [disabled]="displayButtonOn" (click)="calcular()">=</button>
+    </div>
+  </div>
+</div>

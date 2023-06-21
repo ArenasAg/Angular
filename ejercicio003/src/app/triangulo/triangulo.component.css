@@ -1,0 +1,33 @@
+.triangulo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.triangulo {
+  position: relative;
+  margin: 0 30px;
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 82px solid;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.valor {
+  font-size: 18px;
+  margin: 0;
+  margin-top: 180px;
+}
+
+.nombre {
+  margin-top: 30px;
+  font-size: 20px;
+}

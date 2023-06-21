@@ -1,0 +1,29 @@
+<div class="calculadora">
+  <div class="pantalla">
+    <input #input1 class="input1" type="text" [(ngModel)]="display" />
+  </div>
+
+  <div class="resultado">
+    <input class="input2" type="text" [(ngModel)]="recibirResultad" readonly />
+  </div>
+  <div class="bola">
+    <div class="row">
+      <button class="btn top" (click)="operaciones.subir()">↥</button>
+    </div>
+    <div class="row">
+      <button class="btn left" (click)="atras()">↤</button>
+      <button class="btn center"></button>
+      <button class="btn right" (click)="adelante()">↦</button>
+    </div>
+    <div class="row">
+      <button class="btn bottom" (click)="operaciones.bajar()">↧</button>
+    </div>
+  </div>
+  <div class="operaciones">
+    <app-operaciones
+      #operaciones
+      (resultadoCalculado)="recibirResultado($event)"
+      (mostrar)="mostrarOperacion($event)"
+    ></app-operaciones>
+  </div>
+</div>

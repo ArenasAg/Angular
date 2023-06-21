@@ -1,0 +1,13 @@
+<div style="text-align: center">
+  <h1>Reloj Digital</h1>
+  <!-- [inicio]="15" " -->
+  <app-reloj
+    [inicioHoras]="0"
+    [inicioMinutos]="0"
+    [inicioSegundos]="0"
+    (segundoMinuto)="actualizar($event)"
+    style="background-color: transparent"
+  ></app-reloj>
+  <h2>EVENTO :</h2>
+  <h3>{{ mensaje }}</h3>
+</div>

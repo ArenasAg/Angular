@@ -1,0 +1,37 @@
+<div class="triangulo-container">
+  <div
+    class="triangulo"
+    [ngStyle]="{ 'border-bottom-color': coloresTriangulo[0].color }"
+  >
+    <div class="content">
+      <p class="valor">{{ valor1 }}</p>
+      <div class="nombre">
+        <p>{{ coloresTriangulo[0].nombre }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="triangulo"
+    [ngStyle]="{ 'border-bottom-color': coloresTriangulo[1].color }"
+  >
+    <div class="content">
+      <p class="valor">{{ valor2 }}</p>
+      <div class="nombre">
+        <p>{{ coloresTriangulo[1].nombre }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="triangulo"
+    [ngStyle]="{ 'border-bottom-color': coloresTriangulo[2].color }"
+  >
+    <div class="content">
+      <p class="valor">{{ valor3 }}</p>
+      <div class="nombre">
+        <p>{{ coloresTriangulo[2].nombre }}</p>
+      </div>
+    </div>
+  </div>
+</div>
