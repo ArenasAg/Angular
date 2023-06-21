@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4" *ngFor="let personaje of personajes">
+      <div
+        class="card"
+        (mouseenter)="personaje.showEpisodes = true"
+        (mouseleave)="personaje.showEpisodes = false"
+      >
+        <div class="card-header">
+          <h2 class="card-title">{{ personaje.name }}</h2>
+        </div>
+        <img
+          class="card-image"
+          [src]="personaje.image"
+          alt="{{ personaje.name }}"
+        />
+        <div class="card-content">
+          <p>Status: {{ personaje.status }}</p>
+          <p>Species: {{ personaje.species }}</p>
+          <p>Gender: {{ personaje.gender }}</p>
+          <p>Origin: {{ personaje.origin.name }}</p>
+          <p>Location: {{ personaje.location.name }}</p>
+          <div
+            class="episode-list"
+            *ngIf="personaje.showEpisodes && personaje.episodes"
+          >
+            <h4>Episodes:</h4>
+            <ul>
+              <li *ngFor="let episode of personaje.episodes">
+                {{ episode.name }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
