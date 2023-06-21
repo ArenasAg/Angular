@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="personajes != null; else espera" >
   <div class="row">
     <div class="col-4" *ngFor="let personaje of personajes">
       <div
@@ -36,3 +36,5 @@
     </div>
   </div>
 </div>
+
+<ng-template #espera >Esperando datos..</ng-template>
